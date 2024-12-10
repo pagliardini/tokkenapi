@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crear Producto</title>
+</head>
+<body>
+<h1>Crear nuevo producto</h1>
+<form action="" method="post" enctype="multipart/form-data">
+    {{ form.hidden_tag() }}
+    <p>
+        {{ form.nombre.label }}<br>
+        {{ form.nombre(size=32) }}
+    </p>
+    <p>
+        {{ form.descripcion.label }}<br>
+        {{ form.descripcion(rows=4, cols=32) }}
+    </p>
+    <p>
+        {{ form.ean.label }}<br>
+        {{ form.ean(size=32) }}
+    <p>
+        {{ form.precio.label }}<br>
+        {{ form.precio(step="0.01") }}
+    </p>
+    <p>
+        {{ form.stock.label }}<br>
+        {{ form.stock() }}
+    </p>
+    <p>
+        {{ form.image.label }}<br>
+        {{ form.image() }}
+    </p>
+    <p>{{ form.submit() }}</p>
+</form>
+</body>
+</html>
